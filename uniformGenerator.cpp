@@ -1,5 +1,7 @@
-#include<stdio>
 #include "uniformGenerator.hpp"
+
+#include <vector>
+
 
 class uniformGenerator{
 private:
