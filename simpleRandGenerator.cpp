@@ -12,5 +12,6 @@ void simpleRandGenerator::init(long _seed){
   
 double simpleRandGenerator::getUniform(){
   srand(time(&this->factor));
+  rand();//needs a first call before use
   return ((double)rand() / (double)RAND_MAX);
 }
