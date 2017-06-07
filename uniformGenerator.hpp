@@ -12,7 +12,7 @@
 #endif /* uniformGenerator_hpp */
 #include <stdio.h>
 #include <string>
-
+#include <vector>
 
 
 class uniformGenerator{
