@@ -25,7 +25,7 @@ int main() {
   
   cout << "From Box-Muller:" <<"\n";
   normalGenerator* myNormal = new boxMuller(myRandGenerator);
-  vector<double,long>res = myNormal->getNormalVector(10);
+  std::vector<double>res = myNormal->getNormalVector(10);
   
   for(long i=0; i<=9; i++){
     cout << res[i] <<"\n";

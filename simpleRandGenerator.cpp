@@ -8,10 +8,11 @@ simpleRandGenerator::simpleRandGenerator(){};
 
 void simpleRandGenerator::init(long _seed){
   this->factor = _seed;
+  srand(time(&this->factor));
+  rand();//needs a first call before use
 };
   
 double simpleRandGenerator::getUniform(){
-  srand(time(&this->factor));
-  rand();//needs a first call before use
+  
   return ((double)rand() / (double)RAND_MAX);
 }

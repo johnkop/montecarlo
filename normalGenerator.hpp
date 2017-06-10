@@ -1,10 +1,10 @@
 #ifndef normalGenerator_hpp
 #define normalGenerator_hpp
 
-#include <stdio.h>
+#include "stdio.h"
 #include <vector>
 
-#include<uniformGenerator.hpp>
+#include "uniformGenerator.hpp"
 
 class normalGenerator{
 protected:
@@ -13,7 +13,7 @@ public:
   normalGenerator(uniformGenerator& uniformGen);
   virtual double getNormal()=0;
   
-  std::vector<double,long> getNormalVector(long N);
+  std::vector<double> getNormalVector(long N);
   
 };
 

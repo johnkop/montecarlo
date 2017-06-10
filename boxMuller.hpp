@@ -2,9 +2,9 @@
 #define boxMuller_hpp
 
 
-#include <stdio.h>
+#include "stdio.h"
 
-#include<normalGenerator.hpp>
+#include "normalGenerator.hpp"
 
 class boxMuller:public normalGenerator{
 private:

@@ -9,7 +9,7 @@
 #ifndef uniformGenerator_hpp
 #define uniformGenerator_hpp
 
-#endif /* uniformGenerator_hpp */
+
 #include <stdio.h>
 #include <string>
 #include <vector>
@@ -24,5 +24,6 @@ public:
   
   virtual double getUniform()=0;
   
-  std::vector<double,long> getUniformVector(long N);
+  std::vector<double> getUniformVector(long N);
 };
+#endif /* uniformGenerator_hpp */
