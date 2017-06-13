@@ -8,9 +8,9 @@
 
 class normalGenerator{
 protected:
-  uniformGenerator* ug;
+  uniformGenerator * ug;
 public:
-  normalGenerator(uniformGenerator& uniformGen);
+  normalGenerator(uniformGenerator & uniformGen);
   virtual double getNormal()=0;
   
   std::vector<double> getNormalVector(long N);
