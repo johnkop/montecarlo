@@ -39,7 +39,7 @@ public:
   
   std::vector<T> mesh(long nSteps) const;
 
-//  Range<T>& operator = (const Range<T>& ran2);
+  Range<T>& operator = (const Range<T>& ran2);
   
   
 };
