@@ -5,7 +5,7 @@
 
 #include "simpleRandGenerator.hpp"
 #include "boxMuller.hpp"
-
+#include "Range.hpp"
 
 using namespace std;
 
@@ -29,6 +29,18 @@ int main() {
   
   for(long i=0; i<=9; i++){
     cout << res[i] <<"\n";
+  }
+  
+  double T = 1.0;
+  Range<double> ran(0.0,T);
+  cout<<"ran hi is: "<<ran.high()<<"\n";
+  cout<<"ran low is: "<<ran.low()<<"\n";
+  cout<<"ran contains 0.5: "<<ran.contains(0.5)<<"\n";
+  
+  cout<<"the mesh looks like:"<<"\n";
+  std::vector<double>mesh = ran.mesh(10);
+  for(long i=0; i<=10; i++){
+    cout << mesh[i] <<"\n";
   }
   
   return 0;
