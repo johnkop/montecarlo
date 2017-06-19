@@ -19,14 +19,14 @@ private:
 
 public:
   oneFactorSDE();
-  oneFactorSDE(double initialCondition, const Range<double>& interval)
+  oneFactorSDE(double initialCondition, const Range<double>& interval);
   
   const double& initialCondition()const;
   const Range<double>& inyerval()const;
   
   double getExpiry() const;
   
-  virtual voidAccept(oneFactorSDEVisitor& visitor) = 0;
+  virtual void Accept(oneFactorSDEVisitor& visitor) = 0;
 
 
 };
