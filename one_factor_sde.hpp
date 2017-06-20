@@ -1,34 +1,34 @@
 //
-//  oneFactorSDE.hpp
+//  one_factor_sde.hpp
 //  c++
 //
 //  Created by JK on 11/06/2017.
 //  Copyright © 2017 JK. All rights reserved.
 //
 
-#ifndef oneFactorSDE_hpp
-#define oneFactorSDE_hpp
+#ifndef one_factor_sde_hpp
+#define one_factor_sde_hpp
 
 #include <stdio.h>
 #include <Range.hpp>
 
-class oneFactorSDE{
+class OneFactorSDE{
 private:
   double initCondition;
   Range<double> ran;
 
 public:
-  oneFactorSDE();
-  oneFactorSDE(double initialCondition, const Range<double>& interval);
+  OneFactorSDE();
+  OneFactorSDE(double initialCondition, const Range<double>& interval);
   
   const double& initialCondition()const;
   const Range<double>& inyerval()const;
   
   double getExpiry() const;
   
-  virtual void Accept(oneFactorSDEVisitor& visitor) = 0;
+  virtual void Accept(OneFactorSDEVisitor& visitor) = 0;
 
 
 };
 
-#endif /* oneFactorSDE_hpp */
+#endif /* one_factor_sde_hpp */

@@ -18,10 +18,10 @@ public:
   
   virtual ~OneFactorSDEVisitor();
   
-  virtual void Visit(SDETypeA& sde)=0;
+  virtual void visit(SDETypeA& sde)=0;
 //  virtual void Visit(SDETypeA& sde)=0;
 //  virtual void Visit(SDETypeA& sde)=0;
-  virtual void Visit(SDETypeD& sde)=0;
+  virtual void visit(SDETypeD& sde)=0;
   
   OneFactorSDEVisitor& operator = (const OneFactorSDEVisitor& source);
   

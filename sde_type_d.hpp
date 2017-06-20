@@ -1,26 +1,26 @@
 //
-//  oneFactorSDE_D.hpp
+//  sde_type_d.hpp
 //  c++
 //
 //  Created by JK on 17/06/2017.
 //  Copyright © 2017 JK. All rights reserved.
 //
 
-#ifndef oneFactorSDE_D_hpp
-#define oneFactorSDE_D_hpp
+#ifndef sde_type_d_hpp
+#define sde_type_d_hpp
 
 #include <stdio.h>
-#include <oneFactorSDE.hpp>
+#include "one_factor_sde.hpp"
 
-class oneFactorSDE_D : public oneFactorSDE{
+class SDETypeD : public OneFactorSDE{
 private:
   double (*drift)(double t, double X);
   double(*diffusion)(double t, double X);
 
 public:
-  oneFactorSDE_D(): oneFactorSDE();
+  SDETypeD():OneFactorSDE();
   
-  oneFactorSDE_D(double initialCondition, const Range<double>& interval,
+  SDETypeD(double initialCondition, const Range<double>& interval,
                  double(*driftFunction)(double t,double X),
                  double (*diffusionFunction)(double t, double X));
   
@@ -31,4 +31,4 @@ public:
   
 };
 
-#endif /* oneFactorSDE_D_hpp */
+#endif /* sde_type_d_hpp */
