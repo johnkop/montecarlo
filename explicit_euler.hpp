@@ -21,7 +21,7 @@ public:
   ExplicitEuler(long nsteps, const OneFactorSDE& sde);
   
   
-  void visit(SDETypeA& sde);
+//  void visit(SDETypeA& sde);
   void visit(SDETypeD& sde);
 };
 #endif /* explicit_euler_hpp */

@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "one_factor_sde.hpp"
+#include "one_factor_sde_visitor.hpp"
 
 class SDETypeD : public OneFactorSDE{
 private:
@@ -27,7 +28,7 @@ public:
   double calculateDrift(double t, double X) const;
   double calculateDiffusion(double t, double X) const;
   
-  virtual void accept(oneFactorSDEVisitor& visitor);
+  virtual void accept(OneFactorSDEVisitor& visitor);
   
 };
 

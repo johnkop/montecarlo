@@ -21,13 +21,15 @@ class FDMVisitor : public OneFactorSDEVisitor{
 //protected:
 public:
   double init_val, v_old; // init conditions
-  double n_new; // solution at n+1
+  double v_new; // solution at n+1
   
   std::vector<double> x;
   double k;
   double sqrk;
   
   std::vector<double> res;
+  
+  std::vector<double> dW;
   
   long n;
   
