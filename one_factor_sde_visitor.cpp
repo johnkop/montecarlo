@@ -14,10 +14,10 @@ OneFactorSDEVisitor::OneFactorSDEVisitor(const OneFactorSDEVisitor& source){};
 
 OneFactorSDEVisitor::~OneFactorSDEVisitor(){};
 
-OneFactorSDEVisitor::Visit(SDETypeA& sde){};
+//OneFactorSDEVisitor::Visit(SDETypeA& sde){};
 //  virtual void Visit(SDETypeA& sde)=0;
 //  virtual void Visit(SDETypeA& sde)=0;
-OneFactorSDEVisitor::Visit(SDETypeD& sde{}
+void OneFactorSDEVisitor::visit(SDETypeD& sde){}
 
-OneFactorSDEVisitor::OneFactorSDEVisitor& operator =
-                           (const OneFactorSDEVisitor& source){};
+//OneFactorSDEVisitor::OneFactorSDEVisitor& operator =
+//                           (const OneFactorSDEVisitor& source){};

@@ -11,22 +11,22 @@
 
 #include <stdio.h>
 #include "one_factor_sde.hpp"
-#include "one_factor_sde_visitor.hpp"
+
 
 class SDETypeD : public OneFactorSDE{
 private:
-  double (*drift)(double t, double X);
-  double(*diffusion)(double t, double X);
+  double (*drift)(double X);
+  double(*diffusion)(double X);
 
 public:
-  SDETypeD():OneFactorSDE();
+  SDETypeD():OneFactorSDE(){};
   
   SDETypeD(double initialCondition, const Range<double>& interval,
-                 double(*driftFunction)(double t,double X),
-                 double (*diffusionFunction)(double t, double X));
+                 double(*driftFunction)(double X),
+                 double (*diffusionFunction)(double X));
   
-  double calculateDrift(double t, double X) const;
-  double calculateDiffusion(double t, double X) const;
+  double calculateDrift(double X) const;
+  double calculateDiffusion(double X) const;
   
   virtual void accept(OneFactorSDEVisitor& visitor);
   

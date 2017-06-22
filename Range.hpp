@@ -10,6 +10,7 @@
 #define Range_hpp
 
 #include <stdio.h>
+#include<iostream>
 #include <vector>
 
 template <class T>

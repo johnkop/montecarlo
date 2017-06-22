@@ -11,7 +11,8 @@
 
 #include <stdio.h>
 
-#include "sde_type_d.hpp"
+class SDETypeD;
+//#include "sde_type_d.hpp"
 
 class OneFactorSDEVisitor{
 private:

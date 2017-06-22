@@ -10,7 +10,10 @@
 #define one_factor_sde_hpp
 
 #include <stdio.h>
-#include <Range.hpp>
+
+#include "Range.hpp"
+
+class OneFactorSDEVisitor;
 
 class OneFactorSDE{
 private:
@@ -26,9 +29,7 @@ public:
   
   double getExpiry() const;
   
-  virtual void Accept(OneFactorSDEVisitor& visitor) = 0;
-
-
+  virtual void accept(OneFactorSDEVisitor& visitor) = 0;
 };
 
 #endif /* one_factor_sde_hpp */
