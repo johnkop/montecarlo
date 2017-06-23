@@ -34,7 +34,10 @@ public:
   long n;
   
   FDMVisitor(long nsteps, const Range<double>& interval, double initial_value);
+  
   FDMVisitor(long nsteps, const OneFactorSDE& sde);
+  
+  void setRandomArray(const std::vector<double>& randomArray);
   
   virtual std::vector<double> path() const;
   
