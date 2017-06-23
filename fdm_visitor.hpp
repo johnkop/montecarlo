@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include "one_factor_sde_visitor.hpp"
 #include "Range.hpp"
-
+class OneFactorSDE;
 
 class FDMVisitor : public OneFactorSDEVisitor{
   
