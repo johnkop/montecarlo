@@ -1,10 +1,3 @@
-//
-//  one_factor_sde.hpp
-//  c++
-//
-//  Created by JK on 11/06/2017.
-//  Copyright © 2017 JK. All rights reserved.
-//
 
 #ifndef one_factor_sde_hpp
 #define one_factor_sde_hpp
