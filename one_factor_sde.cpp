@@ -14,5 +14,5 @@ const Range<double>& OneFactorSDE::interval()const{
 };
 
 double OneFactorSDE::getExpiry()const{
-  return 0.0;
+  return initCondition;
 };
