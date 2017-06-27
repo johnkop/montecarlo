@@ -1,10 +1,4 @@
-//
-//  namespace_exact_sde.hpp
-//  c++
-//
-//  Created by JK on 19/06/2017.
-//  Copyright © 2017 JK. All rights reserved.
-//
+
 
 #ifndef namespace_exact_sde_hpp
 #define namespace_exact_sde_hpp

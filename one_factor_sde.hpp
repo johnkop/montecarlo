@@ -18,7 +18,7 @@ public:
   OneFactorSDE(double initialCondition, const Range<double>& interval);
   
   const double& initialCondition()const;
-  const Range<double>& inyerval()const;
+  const Range<double>& interval()const;
   
   double getExpiry() const;
   

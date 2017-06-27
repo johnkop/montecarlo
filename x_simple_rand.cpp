@@ -50,10 +50,10 @@ int main() {
   }
   double ic = 1.0;
   
-  exact_sde::a = 1.1;
-  exact_sde::b = 0.5;
-  
-  SDETypeD sde(ic,ran,exact_sde::drift,exact_sde::diffusion);
+//  exact_sde::a = 1.1;
+//  exact_sde::b = 0.5;
+//  
+//  SDETypeD sde(ic,ran,exact_sde::drift,exact_sde::diffusion);
   
   
   return 0;
