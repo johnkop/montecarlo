@@ -1,10 +1,3 @@
-//
-//  fdm_visitor.hpp
-//  c++
-//
-//  Created by JK on 19/06/2017.
-//  Copyright © 2017 JK. All rights reserved.
-//
 
 #ifndef fdm_visitor_hpp
 #define fdm_visitor_hpp
@@ -18,20 +11,20 @@ class OneFactorSDE;
 
 class FDMVisitor : public OneFactorSDEVisitor{
   
-//protected:
-public:
+protected:
+  
+  double sqrk;
+  long n;
+  
+  //these below for convenience
   double init_val, v_old; // init conditions
   double v_new; // solution at n+1
-  
-  std::vector<double> x;
+  std::vector<double> res;// the result path
+  std::vector<double> x; // mesh data
+  std::vector<double> dW; //random array
   double k;
-  double sqrk;
-  
-  std::vector<double> res;
-  
-  std::vector<double> dW;
-  
-  long n;
+
+public:
   
   FDMVisitor(long nsteps, const Range<double>& interval, double initial_value);
   

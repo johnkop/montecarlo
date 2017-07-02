@@ -1,10 +1,3 @@
-//
-//  Range.hpp
-//  c++
-//
-//  Created by JK on 13/06/2017.
-//  Copyright © 2017 JK. All rights reserved.
-//
 
 #ifndef Range_hpp
 #define Range_hpp
@@ -81,5 +74,5 @@ public:
   //  Range<T>& operator = (const Range<T>& ran2){
   //  };
 };
-//class template Range<double>;
+
 #endif /* Range_hpp */
