@@ -1,10 +1,3 @@
-//
-//  explicit_euler.hpp
-//  c++
-//
-//  Created by JK on 19/06/2017.
-//  Copyright © 2017 JK. All rights reserved.
-//
 
 #ifndef explicit_euler_hpp
 #define explicit_euler_hpp
@@ -12,6 +5,7 @@
 #include <stdio.h>
 #include "fdm_visitor.hpp"
 #include "sde_type_d.hpp"
+//#include "Range.hpp"
 
 class ExplicitEuler : public FDMVisitor{
 public:
