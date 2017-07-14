@@ -46,7 +46,7 @@ int main() {
   cout<<"ran contains 0.5: "<<ran.contains(0.5)<<"\n";
   
   cout<<"the mesh looks like:"<<"\n";
-  std::vector<double>mesh = ran.mesh(10);
+  std::vector<double>mesh = ran.mesh(N);
   for(long i=0; i<=N; i++){
     cout << mesh[i] <<"\n";
   }
@@ -57,8 +57,20 @@ int main() {
   
   SDETypeD sde(ic,ran,exact_sde::drift,exact_sde::diffusion);
   ExplicitEuler visitor(N,ran,ic);
+  
+  cout<<"number of steps in visitor: "<<visitor.getNumberOfSteps()<<"\n";
+  cout<<"init value in visitor: "<<visitor.getInitValue()<<"\n";
+  cout<<"interval in visitor: "<<visitor.getInterval()[0]<<" "<<visitor.getInterval()[1]<<"\n";
+  cout<<"x.size() in visitor: "<<visitor.getInterval().size()<<"\n";
+
+  
   visitor.setRandomArray(dW);
   sde.accept(visitor);
+  std::vector<double> result = visitor.path();
+  cout << result[0] <<"\n";
+  for(long k=0; k<=N; k++){
+    cout << result[k] <<"\n";
+  }
   
   return 0;
 }

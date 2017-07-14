@@ -35,5 +35,7 @@ public:
   virtual std::vector<double> path() const;
   
   long getNumberOfSteps()const;
+  double getInitValue()const;
+  std::vector<double> getInterval()const;
 };
 #endif /* fdm_visitor_hpp */
