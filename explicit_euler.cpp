@@ -21,7 +21,11 @@ void ExplicitEuler::visit(SDETypeD& sde){
   for(long index=1; index<x.size() ;index++){
     std::cout<<"visit index : "<<index<<"\n";
     v_new = v_old *(1.0 + k * sde.calculateDrift(x[index-1]) + sqrk * sde.calculateDiffusion(x[index-1]) * dW[index-1]);
-    res[index] = v_new;
+    std::cout<<"calc: "<<index << " vnew: "<<v_new<<"\n";
+
+    res.push_back(v_new);
+    std::cout<<"calc: "<<index << " res: "<<res[index]<<"\n";
+
     v_old = v_new;
   };
 };

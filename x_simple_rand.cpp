@@ -67,8 +67,8 @@ int main() {
   visitor.setRandomArray(dW);
   sde.accept(visitor);
   std::vector<double> result = visitor.path();
-  cout << result[0] <<"\n";
-  for(long k=0; k<=N; k++){
+
+  for(long k=0; k<N; k++){
     cout << result[k] <<"\n";
   }
   

@@ -12,7 +12,7 @@ class OneFactorSDE;
 class FDMVisitor : public OneFactorSDEVisitor{
   
 protected:
-  
+//public:
   double sqrk;
   long n;
   
